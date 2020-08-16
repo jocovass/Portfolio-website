@@ -16,7 +16,7 @@ const Logo = () => {
   `)
   console.log('LOGO💥')
   return (
-    <div style={{ width: '8rem' }}>
+    <div style={{ width: '9rem' }}>
       <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
     </div>
   )

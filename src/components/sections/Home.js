@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { Container } from '../elements/reUsable'
 import Header from '../elements/Header'
+import Jumbotron from '../elements/Jumbotron'
+import ScrollIndicator from '../elements/ScrollIndicator'
 
 const StyledHome = styled.section`
   height: 100vh;
   min-height: 600px;
+  position: relative;
 `
 
 const Home = () => {
@@ -14,7 +16,8 @@ const Home = () => {
   return (
     <StyledHome ref={homeRef}>
       <Header headerStyles={headerStyles} />
-      <Container>Home</Container>
+      <Jumbotron />
+      <ScrollIndicator />
     </StyledHome>
   )
 }
