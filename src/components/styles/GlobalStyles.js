@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     button {
         font-family: 'Merriweather', sans-serif;
         background: none;
+        color: var(--clr-text);
         border: none;
         outline: none;
         cursor: pointer;

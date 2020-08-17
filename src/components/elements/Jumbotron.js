@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { Container, btnStyles, Title, Highlight } from './reUsable'
 
 const StyledJmubotron = styled.div`
-  margin-top: 6rem;
   text-align: center;
   .subtitle {
     font-size: 1.2rem;

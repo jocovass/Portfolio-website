@@ -10,18 +10,19 @@ import Nav from './Nav'
 
 const StyledHeader = styled.header`
   padding: 1.1rem 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   &.fixed {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
     z-index: 15;
     transform: translateY(-200px);
     opacity: 0;
   }
   &.fadein {
     background-color: var(--clr-bg);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
     transform: translateY(0px);
     opacity: 1;
     transition: transform 0.3s ease-in-out, opacity 0.7s ease-in-out;

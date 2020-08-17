@@ -18,12 +18,24 @@ export const Highlight = styled.span`
   font-weight: 900;
 `
 
+// titles
 export const Title = styled.h1`
   font-size: 3.8rem;
   line-height: 1.2;
 `
 
-//BTN style
+export const SecondaryTitle = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+`
+
+export const TertiaryTitle = styled.h3`
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+`
+
+// BTN style
 export const btnStyles = css`
   font-weight: 700;
   font-size: 1.2;
