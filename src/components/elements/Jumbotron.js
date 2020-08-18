@@ -44,8 +44,9 @@ const Jumbotron = () => {
               Hi I&rsquo;m <Highlight>Joco</Highlight>
             </Title>
             <p className="subtitle">
-              I&rsquo;m a Front-End Developer, who creates <br />
-              high performante, responsive websites
+              I&rsquo;m a Front-End Developer, who
+              <br />
+              creates high performante, responsive websites
             </p>
             <button className="btn">Check out my work</button>
           </div>

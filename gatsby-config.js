@@ -55,13 +55,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content`,
-    //     path: path.join(__dirname, `src`, `content`),
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: path.join(__dirname, `src`, `content`),
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

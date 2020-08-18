@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
-  width: 90%;
+  width: 85%;
   max-width: 1200px;
   margin: 0 auto;
 `
@@ -23,10 +23,25 @@ export const Title = styled.h1`
   font-size: 3.8rem;
   line-height: 1.2;
 `
+export const Tag = styled.p`
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--clr-accent);
+    margin-right: 5px;
+    margin-bottom: 4px;
+  }
+`
 
 export const SecondaryTitle = styled.h2`
-  font-size: 1.8rem;
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 `
 
 export const TertiaryTitle = styled.h3`
@@ -38,12 +53,13 @@ export const TertiaryTitle = styled.h3`
 // BTN style
 export const btnStyles = css`
   font-weight: 700;
-  font-size: 1.2;
-  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 2rem;
   margin: 2rem 0 3rem;
   border: 2px solid var(--clr-accent);
   background-color: transparent;
   border-radius: 50px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
   transition: 0.15s background ease-in-out;
   &:hover {
     background-color: var(--clr-accent);

@@ -3,9 +3,16 @@ import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Logo = () => {
-  let data = useStaticQuery(graphql`
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "logo.png" }) {
+      file(
+        sourceInstanceName: { eq: "images" }
+        relativePath: { eq: "logo.png" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 115, quality: 75) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -14,10 +21,9 @@ const Logo = () => {
       }
     }
   `)
-  console.log('LOGO💥')
   return (
     <div style={{ width: '9rem' }}>
-      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
+      <Img fluid={fluid} alt="Logo" />
     </div>
   )
 }

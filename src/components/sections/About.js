@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, SecondaryTitle } from '../elements/reUsable'
+import { Container } from '../elements/reUsable'
 import Bio from '../elements/Bio'
 import Skills from '../elements/Skills'
+import AboutPicture from '../elements/AboutPicture'
 
 const StyledAbout = styled.section`
   background-color: var(--clr-bg-light);
-  padding: 7rem 0;
-  text-align: center;
+  padding: 7rem 0 3rem;
 `
 
 const About = () => {
   return (
     <StyledAbout>
       <Container>
-        <SecondaryTitle>About me</SecondaryTitle>
         <Bio />
+        <AboutPicture />
+        <Skills />
       </Container>
-      <Skills />
     </StyledAbout>
   )
 }
