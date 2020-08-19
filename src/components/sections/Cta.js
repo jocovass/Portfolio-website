@@ -11,6 +11,9 @@ const StyledCta = styled.section`
     font-weight: 700;
     line-height: 1.2;
   }
+  @media ${props => props.theme.mq.tab} {
+    padding: 6vw 0;
+  }
 `
 const Btn = styled.a`
   ${btnStyles}

@@ -12,12 +12,12 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const UL = styled.ul`
   list-style-type: none;
   width: 80%;
-  max-width: 500px;
+  max-width: 350px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   li {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   a {
     color: var(--clr-text);

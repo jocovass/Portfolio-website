@@ -22,6 +22,9 @@ export const Highlight = styled.span`
 export const Title = styled.h1`
   font-size: 3.8rem;
   line-height: 1.2;
+  @media ${({ theme }) => theme.mq.large} {
+    font-size: 5.5rem;
+  }
 `
 export const Tag = styled.p`
   font-size: 1.3rem;

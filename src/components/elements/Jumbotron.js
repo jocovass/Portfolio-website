@@ -25,15 +25,12 @@ const StyledJmubotron = styled.div`
     .intro {
       margin-bottom: 1rem;
     }
-    .col {
-      flex-grow: 1;
-    }
     .background {
       position: absolute;
       z-index: -1;
-      left: -10%;
+      right: -10%;
       width: 120%;
-      height: 100%;
+      height: 92%;
       background-color: var(--clr-bg-light);
       border-radius: 5px;
       box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
@@ -46,10 +43,22 @@ const StyledJmubotron = styled.div`
     }
     .background {
       width: 130%;
-      left: -30%;
+      right: 0;
     }
     .img-wrapper {
       width: 35rem;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+  @media ${({ theme }) => theme.mq.large} {
+    .background {
+      width: 70vw;
+      max-width: 900px;
+    }
+    .img-wrapper {
+      width: 52vw;
+      max-width: 57.5rem;
     }
   }
 `

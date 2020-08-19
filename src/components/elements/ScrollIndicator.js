@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   border: 2px solid var(--clr-text);
   border-radius: 50px;
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 50%;
   transform: translate(-50%);
   display: flex;
