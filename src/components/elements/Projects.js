@@ -7,9 +7,15 @@ const StyledProjects = styled.div`
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(23rem, 1fr));
-  grid-gap: 4rem 2rem;
+  grid-gap: 2rem 0.5rem;
   justify-content: center;
   justify-items: center;
+  @media ${({ theme }) => theme.mq.medium} {
+    grid-template-columns: repeat(2, minmax(23rem, 1fr));
+  }
+  @media ${({ theme }) => theme.mq.large} {
+    grid-template-columns: repeat(3, minmax(23rem, 1fr));
+  }
 `
 
 const Projects = () => {

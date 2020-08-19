@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { btnStyles, SecondaryTitle, Tag } from './reUsable'
+import AboutPicture from './AboutPicture'
 
 const StyledBio = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  .text-container {
+    width: 100%;
+    max-width: 35rem;
+  }
   .bio__text {
     font-size: 1.2rem;
     line-height: 1.5;
@@ -26,6 +32,7 @@ const Bio = () => (
       </p>
       <button className="bio__btn">Resume</button>
     </div>
+    <AboutPicture />
   </StyledBio>
 )
 

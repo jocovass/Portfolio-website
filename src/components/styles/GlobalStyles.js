@@ -13,6 +13,10 @@ const GlobalStyles = createGlobalStyle`
         --clr-text: ${({ theme }) => theme.colors.text};
         --clr-accent: ${({ theme }) => theme.colors.accent};
         font-size: 62.5%;
+
+        @media ${props => props.theme.mq.tab} {
+            font-size: 71.85%;
+        }
     }
 
     body {

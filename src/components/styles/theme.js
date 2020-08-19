@@ -6,9 +6,9 @@ const theme = {
     accent: '#DC3545',
   },
   mq: {
-    large: 'only screen and (max-width: 93.75em)',
-    medium: 'only screen and (max-width: 50em)',
-    small: 'only screen and (max-width: 37.5rem)',
+    tab: 'only screen and (min-width: 31.25rem)', // 500px
+    medium: 'only screen and (min-width: 43.75rem)', // 600px
+    large: 'only screen and (min-width: 62.5em)', // 1000px
   },
 }
 

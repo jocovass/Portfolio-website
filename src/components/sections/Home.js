@@ -7,7 +7,9 @@ import ScrollIndicator from '../elements/ScrollIndicator'
 const StyledHome = styled.section`
   height: 100vh;
   min-height: 600px;
-  padding: 13rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 `
 

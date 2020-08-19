@@ -7,6 +7,10 @@ import { TertiaryTitle, Highlight } from '../components/elements/reUsable'
 import CategoryList from './CategoryList'
 
 const StyledCategories = styled.div`
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
   padding: 3rem 1rem;
   background-color: var(--clr-bg);
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
@@ -14,10 +18,18 @@ const StyledCategories = styled.div`
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+
+  @media ${({ theme }) => theme.mq.medium} {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+  }
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-right: 1rem;
 `
 

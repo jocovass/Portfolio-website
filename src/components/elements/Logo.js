@@ -22,7 +22,7 @@ const Logo = () => {
     }
   `)
   return (
-    <div style={{ width: '9rem' }}>
+    <div style={{ width: '9rem', maxWidth: '100px' }}>
       <Img fluid={fluid} alt="Logo" />
     </div>
   )

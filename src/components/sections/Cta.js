@@ -18,15 +18,19 @@ const Btn = styled.a`
   margin-top: 3rem;
   margin-bottom: 0;
 `
+const CtaContainer = styled(Container)`
+  max-width: 600px;
+  margin: 0 auto;
+`
 
 const Cta = () => (
   <StyledCta>
-    <Container>
+    <CtaContainer>
       <p className="cta-text">
         If you like what you see don&rsquo;t hesitate to get in touch!
       </p>
       <Btn href="mailte:">Get in touch</Btn>
-    </Container>
+    </CtaContainer>
   </StyledCta>
 )
 

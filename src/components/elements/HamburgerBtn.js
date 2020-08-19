@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 const StyledHamburger = styled.div`
   cursor: pointer;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ const StyledHamburger = styled.div`
   span {
     display: block;
     height: 2px;
-    width: 2.6rem;
+    width: 2.3rem;
     border-radius: 5px;
     position: relative;
     background-color: ${({ menuOpen }) =>

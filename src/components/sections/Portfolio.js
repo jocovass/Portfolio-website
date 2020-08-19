@@ -4,7 +4,7 @@ import { Container, SecondaryTitle, Tag } from '../elements/reUsable'
 import Projects from '../elements/Projects'
 
 const StyledPortfolio = styled.section`
-  padding: 12rem 0 7rem;
+  padding: 7rem 0;
   .subtitle {
     margin-top: 1rem;
     font-size: 1.2rem;

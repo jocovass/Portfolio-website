@@ -14,6 +14,9 @@ const StyledHeader = styled.header`
   top: 0px;
   left: 0px;
   right: 0px;
+  .header-container {
+    width: 90%;
+  }
   &.fixed {
     position: fixed;
     z-index: 15;
@@ -56,7 +59,7 @@ const Header = ({ headerStyles }) => {
   }
   return (
     <StyledHeader className={headerStyles}>
-      <Container>
+      <Container className="header-container">
         <Flex>
           <Logo />
           <HamburgerBtn menuOpen={menuOpen} clickHandler={clickHandler} />

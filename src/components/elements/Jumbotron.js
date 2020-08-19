@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Container, btnStyles, Title, Highlight } from './reUsable'
 
 const StyledJmubotron = styled.div`
+  margin-top: 3rem;
   text-align: center;
   .subtitle {
     font-size: 1.2rem;
@@ -17,6 +18,39 @@ const StyledJmubotron = styled.div`
   .img-wrapper {
     width: 30rem;
     margin: 0 auto;
+    position: relative;
+  }
+
+  @media ${({ theme }) => theme.mq.tab} {
+    .intro {
+      margin-bottom: 1rem;
+    }
+    .col {
+      flex-grow: 1;
+    }
+    .background {
+      position: absolute;
+      z-index: -1;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background-color: var(--clr-bg-light);
+      border-radius: 5px;
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    }
+  }
+  @media ${({ theme }) => theme.mq.medium} {
+    text-align: left;
+    .content {
+      display: flex;
+    }
+    .background {
+      width: 130%;
+      left: -30%;
+    }
+    .img-wrapper {
+      width: 35rem;
+    }
   }
 `
 
@@ -39,7 +73,7 @@ const Jumbotron = () => {
     <StyledJmubotron>
       <Container>
         <div className="content">
-          <div className="col">
+          <div className="col intro">
             <Title>
               Hi I&rsquo;m <Highlight>Joco</Highlight>
             </Title>
@@ -51,6 +85,7 @@ const Jumbotron = () => {
             <button className="btn">Check out my work</button>
           </div>
           <div className="col img-wrapper">
+            <div className="background"></div>
             <Img fluid={data.file.childImageSharp.fluid} />
           </div>
         </div>

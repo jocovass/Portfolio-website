@@ -1,68 +1,36 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
+import gitSvg from '../../images/git.svg'
 
 const StyledAboutPicture = styled.div`
-  .image-container {
-    width: 70%;
-    height: 250px;
-    border-radius: 5px;
-    margin: 0 auto 2rem;
-    position: relative;
-  }
-  .profile-pic {
-    position: absolute;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .image-backdrop {
+  display: none;
+  @media ${({ theme }) => theme.mq.medium} {
     display: block;
+    width: 65vw;
+    max-width: 75rem;
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: var(--clr-accent);
+    right: -2.5rem;
+    top: 8rem;
+    z-index: -1;
+    img {
+      width: 100%;
+    }
   }
-`
-const StyledImage = styled(Img)`
-  object-fit: cover;
+  @media only screen and (min-width: 800px) {
+    width: 55vw;
+    top: 0rem;
+  }
+  @media ${({ theme }) => theme.mq.large} {
+    width: 65vw;
+    right: -5rem;
+    top: -5rem;
+  }
 `
 
 const AboutPicture = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(
-        sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "prof-pic.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
   return (
     <StyledAboutPicture>
-      <div className="image-container">
-        <span className="image-backdrop"></span>
-        <div className="profile-pic">
-          <StyledImage
-            fluid={data.file.childImageSharp.fluid}
-            alt="Profile picture"
-          />
-        </div>
-      </div>
+      <img src={gitSvg} alt="svg" />
     </StyledAboutPicture>
   )
 }
