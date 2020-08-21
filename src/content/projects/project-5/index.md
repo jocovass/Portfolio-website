@@ -1,9 +1,6 @@
 ---
-title: 'Netflix | Home-page'
-live: 'https://jovial-morse-5ac19f.netlify.com/'
-source: 'https://github.com/jocovass/netflix-frontend-replica'
+title: 'Movie-app'
+live: 'https://movie-app.jococodes.com/movie'
+source: 'https://github.com/jocovass/movie-app'
 image: 'movie.png'
 ---
-
-<p>This is a copy of the original sites landing page.</p>
-<span>HTML, SCSS, JavaScipt</span>

@@ -67,38 +67,36 @@ const StyledJmubotron = styled.div`
   }
   @media ${({ theme }) => theme.mq.ultra} {
     .img-wrapper {
-      max-width: 50rem;
+      max-width: 55rem;
     }
     .bg {
-      height: 35rem;
+      height: 37rem;
     }
   }
 `
 
-const Jumbotron = () => {
-  return (
-    <StyledJmubotron>
-      <div className="content">
-        <div className="col intro">
-          <Title>
-            Hi I&rsquo;m <Highlight>Joco</Highlight>
-          </Title>
-          <p className="subtitle">
-            I&rsquo;m a Front-End Developer, who
-            <br />
-            creates high performante, responsive websites
-          </p>
-          <Link to="portfolio" smooth={true} offset={-100} className="btn">
-            Check Out My Work
-          </Link>
-        </div>
-        <div className="col img-wrapper">
-          <img src={hero} alt="" className="hero" />
-          <div className="bg"></div>
-        </div>
+const Jumbotron = () => (
+  <StyledJmubotron>
+    <div className="content">
+      <div className="col intro">
+        <Title>
+          Hi I&rsquo;m <Highlight>Joco</Highlight>
+        </Title>
+        <p className="subtitle">
+          I&rsquo;m a Front-End Developer, who
+          <br />
+          creates high performante, responsive websites
+        </p>
+        <Link to="portfolio" smooth={true} offset={-100} className="btn">
+          Check Out My Work
+        </Link>
       </div>
-    </StyledJmubotron>
-  )
-}
+      <div className="col img-wrapper">
+        <img src={hero} alt="" className="hero" />
+        <div className="bg"></div>
+      </div>
+    </div>
+  </StyledJmubotron>
+)
 
 export default Jumbotron
