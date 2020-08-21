@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -30,6 +31,9 @@ const StyledNav = styled.nav`
       color: var(--clr-accent);
     }
   }
+  .active {
+    color: var(--clr-accent);
+  }
 `
 const navItems = ['Home', 'About', 'Portfolio', 'Contact']
 const MobileMenu = ({ clickHandler }) => (
@@ -39,9 +43,16 @@ const MobileMenu = ({ clickHandler }) => (
         {navItems.map(item => {
           return (
             <li className="nav__item" key={item}>
-              <a href="/" className="nav__link" onClick={clickHandler}>
+              <Link
+                to={item.toLowerCase()}
+                spy={true}
+                smooth={true}
+                activeClass="active"
+                className="nav__link"
+                onClick={clickHandler}
+              >
                 {item}
-              </a>
+              </Link>
             </li>
           )
         })}

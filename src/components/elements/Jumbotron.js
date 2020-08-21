@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import { btnStyles, Title, Highlight } from './reUsable'
 import hero from '../../images/hero.svg'
@@ -13,6 +14,8 @@ const StyledJmubotron = styled.div`
   }
   .btn {
     ${btnStyles}
+    display: inline-block;
+    cursor: pointer;
   }
   .img-wrapper {
     width: 30rem;
@@ -85,7 +88,9 @@ const Jumbotron = () => {
             <br />
             creates high performante, responsive websites
           </p>
-          <button className="btn">Check out my work</button>
+          <Link to="portfolio" smooth={true} offset={-100} className="btn">
+            Check Out My Work
+          </Link>
         </div>
         <div className="col img-wrapper">
           <img src={hero} alt="" className="hero" />

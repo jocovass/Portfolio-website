@@ -15,16 +15,14 @@ const StyledPortfolio = styled.section`
   }
 `
 
-const Portfolio = () => {
-  return (
-    <StyledPortfolio>
-      <Container>
-        <Tag>Portfolio</Tag>
-        <SecondaryTitle>Some of My Recent Works</SecondaryTitle>
-        <Projects />
-      </Container>
-    </StyledPortfolio>
-  )
-}
+const Portfolio = () => (
+  <StyledPortfolio id="portfolio">
+    <Container>
+      <Tag>Portfolio</Tag>
+      <SecondaryTitle>Some of My Recent Works</SecondaryTitle>
+      <Projects />
+    </Container>
+  </StyledPortfolio>
+)
 
 export default Portfolio

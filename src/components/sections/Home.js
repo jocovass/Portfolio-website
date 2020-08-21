@@ -19,7 +19,7 @@ const Home = () => {
   const homeRef = useRef()
   const headerStyles = useObserver(homeRef)
   return (
-    <StyledHome ref={homeRef}>
+    <StyledHome ref={homeRef} id="home">
       <Header headerStyles={headerStyles} />
       <Container>
         <Jumbotron />

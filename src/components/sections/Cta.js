@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container, btnStyles } from '../elements/reUsable'
 
@@ -26,15 +27,30 @@ const CtaContainer = styled(Container)`
   margin: 0 auto;
 `
 
-const Cta = () => (
-  <StyledCta>
-    <CtaContainer>
-      <p className="cta-text">
-        If you like what you see don&rsquo;t hesitate to get in touch!
-      </p>
-      <Btn href="mailte:">Get in touch</Btn>
-    </CtaContainer>
-  </StyledCta>
-)
+const Cta = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          social {
+            email
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <StyledCta id="contact">
+      <CtaContainer>
+        <p className="cta-text">
+          If you like what you see don&rsquo;t hesitate to get in touch!
+        </p>
+        <Btn href={`mailto:${data.site.siteMetadata.social.email}`}>
+          Get in touch
+        </Btn>
+      </CtaContainer>
+    </StyledCta>
+  )
+}
 
 export default Cta

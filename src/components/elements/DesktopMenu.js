@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -20,6 +21,7 @@ const StyledNav = styled.nav`
     }
   }
   .nav__link {
+    cursor: pointer;
     font-size: 1.3rem;
     font-weight: 600;
     display: inline-block;
@@ -28,6 +30,9 @@ const StyledNav = styled.nav`
     &:active {
       color: var(--clr-accent);
     }
+  }
+  .active {
+    color: var(--clr-accent);
   }
 `
 const navItems = ['Home', 'About', 'Portfolio', 'Contact']
@@ -38,9 +43,14 @@ const DesktopMenu = () => (
         {navItems.map(item => {
           return (
             <li className="nav__item" key={item}>
-              <a href="/" className="nav__link">
+              <Link
+                to={item.toLowerCase()}
+                smooth={true}
+                offset={-100}
+                className="nav__link"
+              >
                 {item}
-              </a>
+              </Link>
             </li>
           )
         })}
@@ -48,6 +58,11 @@ const DesktopMenu = () => (
     </StyledNav>
   </Wrapper>
 )
+function calcOffset() {
+  if (typeof window !== 'undefined') {
+    return -(window.innerHeight / 2)
+  }
+}
 
 DesktopMenu.propTypes = {
   children: PropTypes.node.isRequired,

@@ -15,15 +15,13 @@ const StyledAbout = styled.section`
   }
 `
 
-const About = () => {
-  return (
-    <StyledAbout>
-      <Container>
-        <Bio />
-        <Skills />
-      </Container>
-    </StyledAbout>
-  )
-}
+const About = () => (
+  <StyledAbout id="about">
+    <Container>
+      <Bio />
+      <Skills />
+    </Container>
+  </StyledAbout>
+)
 
 export default About
