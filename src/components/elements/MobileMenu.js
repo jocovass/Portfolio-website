@@ -14,11 +14,44 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
-
-const MobileMenu = ({ children }) => <Wrapper>{children}</Wrapper>
+const StyledNav = styled.nav`
+  .nav__list {
+    list-style-type: none;
+    text-align: center;
+  }
+  .nav__link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    margin-bottom: 2rem;
+    &:hover,
+    &:active {
+      color: var(--clr-accent);
+    }
+  }
+`
+const navItems = ['Home', 'About', 'Portfolio', 'Contact']
+const MobileMenu = ({ clickHandler }) => (
+  <Wrapper>
+    <StyledNav>
+      <ul className="nav__list">
+        {navItems.map(item => {
+          return (
+            <li className="nav__item" key={item}>
+              <a href="/" className="nav__link" onClick={clickHandler}>
+                {item}
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </StyledNav>
+  </Wrapper>
+)
 
 MobileMenu.propTypes = {
-  children: PropTypes.node.isRequired,
+  clickHandler: PropTypes.func,
 }
 
 export default MobileMenu

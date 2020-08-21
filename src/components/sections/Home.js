@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Header from '../elements/Header'
 import Jumbotron from '../elements/Jumbotron'
 import ScrollIndicator from '../elements/ScrollIndicator'
+import { Container } from '../elements/reUsable'
 
 const StyledHome = styled.section`
   height: 100vh;
@@ -11,6 +12,7 @@ const StyledHome = styled.section`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 `
 
 const Home = () => {
@@ -19,7 +21,9 @@ const Home = () => {
   return (
     <StyledHome ref={homeRef}>
       <Header headerStyles={headerStyles} />
-      <Jumbotron />
+      <Container>
+        <Jumbotron />
+      </Container>
       <ScrollIndicator />
     </StyledHome>
   )

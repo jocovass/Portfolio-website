@@ -7,6 +7,7 @@ import Logo from './Logo'
 import HamburgerBtn from './HamburgerBtn'
 import MobileMenu from './MobileMenu'
 import Nav from './Nav'
+import DesktopMenu from './DesktopMenu'
 
 const StyledHeader = styled.header`
   padding: 1.1rem 0;
@@ -69,10 +70,9 @@ const Header = ({ headerStyles }) => {
             classNames="slide"
             unmountOnExit={true}
           >
-            <MobileMenu>
-              <Nav clickHandler={clickHandler} />
-            </MobileMenu>
+            <MobileMenu clickHandler={clickHandler} />
           </CSSTransition>
+          <DesktopMenu />
         </Flex>
       </Container>
     </StyledHeader>

@@ -48,6 +48,9 @@ const StyledHamburger = styled.div`
           : 'translate(0px, 7px) rotate(0deg)'};
     }
   }
+  @media ${({ theme }) => theme.mq.medium} {
+    display: none;
+  }
 `
 
 const HamburgerBtn = ({ menuOpen, clickHandler }) => (

@@ -11,7 +11,7 @@ const StyledPortfolio = styled.section`
     font-weight: 300;
   }
   @media ${props => props.theme.mq.tab} {
-    padding: 10vw 0;
+    padding: 8vw 0;
   }
 `
 

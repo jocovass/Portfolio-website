@@ -11,7 +11,7 @@ const StyledAbout = styled.section`
   overflow: hidden;
   z-index: -2;
   @media ${props => props.theme.mq.tab} {
-    padding: 10vw 0;
+    padding: 8vw 0;
   }
 `
 
