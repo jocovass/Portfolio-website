@@ -21,6 +21,7 @@ const StyledNav = styled.nav`
     text-align: center;
   }
   .nav__link {
+    cursor: pointer;
     font-size: 1.3rem;
     font-weight: 600;
     display: inline-block;

@@ -6,6 +6,7 @@ import AboutPicture from './AboutPicture'
 const StyledBio = styled.div`
   margin-bottom: 2rem;
   position: relative;
+  z-index: 1;
   .text-container {
     width: 100%;
     max-width: 35rem;
@@ -16,6 +17,7 @@ const StyledBio = styled.div`
   }
   .bio__btn {
     ${btnStyles}
+    display: inline-block;
   }
 `
 
@@ -30,7 +32,9 @@ const Bio = () => (
         professionally. My primary focus is Front-End Development currently, but
         I&rsquo;m always happy to learn new technologies .
       </p>
-      <button className="bio__btn">Resume</button>
+      <a href="./cv.pdf" className="bio__btn" download>
+        Resume
+      </a>
     </div>
     <AboutPicture />
   </StyledBio>
