@@ -8,7 +8,7 @@ const StyledJmubotron = styled.div`
   margin-top: 3rem;
   text-align: center;
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.5px;
   }
@@ -85,7 +85,7 @@ const Jumbotron = () => (
         <p className="subtitle">
           I&rsquo;m a Front-End Developer, who
           <br />
-          creates high performante, responsive websites
+          creates high performance, responsive websites
         </p>
         <Link to="portfolio" smooth={true} offset={-100} className="btn">
           Check Out My Work

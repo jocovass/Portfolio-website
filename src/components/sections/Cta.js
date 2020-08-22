@@ -43,10 +43,10 @@ const Cta = () => {
     <StyledCta id="contact">
       <CtaContainer>
         <p className="cta-text">
-          If you like what you see don&rsquo;t hesitate to get in touch!
+          If you like what you see, don&rsquo;t hesitate to get in touch!
         </p>
         <Btn href={`mailto:${data.site.siteMetadata.social.email}`}>
-          Get in touch
+          Contact me
         </Btn>
       </CtaContainer>
     </StyledCta>

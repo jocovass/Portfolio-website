@@ -25,7 +25,7 @@ const Bio = () => (
       <Tag>About me</Tag>
       <SecondaryTitle>Who Am I</SecondaryTitle>
       <p className="bio__text">
-        I&rsquo;m a self taught Front-End Developer based in Liverpool, Uk.
+        I&rsquo;m a self taught Front-End Developer based in Liverpool, UK.
         I&rsquo;m highly motivated to continuously improve my skills and to grow
         professionally. My primary focus is Front-End Development currently, but
         I&rsquo;m always happy to learn new technologies .
