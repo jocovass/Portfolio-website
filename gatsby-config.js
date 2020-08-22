@@ -13,6 +13,7 @@ module.exports = {
     author: 'Joco',
     siteUrl: 'http://jococodes.com',
     social: {
+      twitter: 'CodesJoco',
       linkedin: 'jozsef-vass-1204231a5',
       codepen: 'jocovass',
       github: 'jocovass',

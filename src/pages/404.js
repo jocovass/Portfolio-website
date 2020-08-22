@@ -5,6 +5,7 @@ import notFound from '../images/404.svg'
 import Layout from '../components/layout/Layout'
 import { Title, Container, btnStyles } from '../components/elements/reUsable'
 import Logo from '../components/elements/Logo'
+import Seo from '../components/seo/Seo'
 
 const StyledError = styled.div`
   text-align: center;
@@ -56,6 +57,7 @@ const StyledBtn = styled(Link)`
 
 const ErrorPage = () => (
   <Layout>
+    <Seo title="Not Found" />
     <Container>
       <StyledError>
         <header className="error-header">
