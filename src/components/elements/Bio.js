@@ -32,7 +32,7 @@ const Bio = () => (
         professionally. My primary focus is Front-End Development currently, but
         I&rsquo;m always happy to learn new technologies .
       </p>
-      <a href="./cv.pdf" className="bio__btn" download>
+      <a href="./Jozsef-Vass_resume.pdf" className="bio__btn" download>
         Resume
       </a>
     </div>
